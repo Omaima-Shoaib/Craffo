@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="output.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Logo -->
+      <img class="logo-img" src="../assets/images/logo.png" alt="" />
+      <!-- Nav Links -->
+      <nav>
+        <ul>
+          <li>Shop by Category</li>
+          <li>Shop by Device</li>
+          <li>Collections</li>
+          <li>Blog</li>
+          <!-- this should be select -->
+          <select name="" id="">
+            <option value="usd" selected>United States (USD $)</option>
+          </select>
+        </ul>
+        <div class="nav_icons">
+          <img src="../assets/icons/mail.svg" alt="mail_icon" />
+          <img src="../assets/icons/search.svg" alt="mail_icon" />
+          <img src="../assets/icons/person.svg" alt="mail_icon" />
+          <div>
+            <span id="cart-notification">0</span>
+            <img src="../assets/icons/shopping_bag.svg" alt="mail_icon" />
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- <section>
+      <img class="cover" src="../assets/images/image-two.webp" alt="" />
+      <div class="gradiant">
+        <p>
+          Native Union <br />
+          X Tom dixon
+        </p>
+      </div>
+    </section> -->
+
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <section>
+            <img class="cover" src="../assets/images/image-two.webp" alt="" />
+            <div class="gradiant">
+              <p>Collaboration</p>
+              <h1 class="title">
+                Native Union <br />
+                X Tom dixon
+              </h1>
+              <button>Learn More</button>
+            </div>
+          </section>
+        </div>
+
+        <div class="swiper-slide">
+          <section>
+            <img class="cover" src="../assets/images/image-two.webp" alt="" />
+            <div class="gradiant">
+              <p>Collaboration</p>
+              <h1 class="title">
+                Native Union <br />
+                X Tom dixon
+              </h1>
+              <button>Learn More</button>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide">   <section>
+            <img class="cover" src="../assets/images/image-two.webp" alt="" />
+            <div class="gradiant">
+              <p>Collaboration</p>
+              <h1 class="title">
+                Native Union <br />
+                X Tom dixon
+              </h1>
+              <button>Learn More</button>
+            </div>
+          </section></div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> -->
+
+      <!-- If we need scrollbar -->
+      <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+
+        loop: true,
+
+        autoplay: {
+          delay: 3000, // Delay between transitions (in milliseconds)
+        },
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
+  </body>
+</html>

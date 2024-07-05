@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+}
+
+header {
+  @apply  bg-Gray900 text-white flex items-center justify-between px-10 sm:flex-col md:flex-row;
+}
+
+.logo-img {
+  @apply bg-transparent w-48;
+}
+nav {
+  @apply flex  items-center;
+}
+nav ul {
+  @apply flex mr-5;
+}
+nav ul li,
+nav ul select {
+  @apply px-3 py-5  cursor-pointer bg-transparent;
+}
+
+nav ul select {
+  /* @apply bg-transparent mr-5 hover:bg-slate-400 cursor-pointer */
+}
+
+nav .nav_icons {
+  @apply flex  space-x-3 relative cursor-pointer;
+}
+nav .nav_icons #cart-notification {
+  @apply bg-white  text-Gray900  absolute top-[-10px] right-[-10px] w-5 h-5 text-sm rounded-full flex justify-center items-center;
+}
+
+
+.swiper .swiper-pagination-bullet{
+    background-color: white;
+    width: 40px;
+    height: 2px;
+    border-radius: 0px;
+}
+section {
+  @apply bg-transparent h-[550px] w-screen relative;
+}
+
+.cover {
+  /* object-fit: contain;
+    width: 100%;
+    height: 100%; */
+  object-position: top right;
+  @apply object-cover object-center w-full  h-full;
+}
+
+section .gradiant {
+  /* position: absolute; */
+  /* width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; */
+  @apply bg-gradient-to-r from-Blue900   to-transparent absolute w-full h-full top-0 right-0 left-0 bottom-0 flex items-start justify-center flex-col px-20 space-y-4;
+  
+}
+
+section .gradiant p{
+    @apply  uppercase text-white ;
+}
+section .gradiant .title{
+    @apply uppercase text-white text-7xl font-bold
+
+}
+section .gradiant button { 
+    @apply bg-Yellow px-6 py-3 uppercase 
+}
