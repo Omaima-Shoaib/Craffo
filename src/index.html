@@ -4,16 +4,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+   
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+
+    <title>Native Union X Tom Dixon Collaboration | Wireless Charger & Lightning Cable</title>
+    <meta name="description" content="Enhance your workspace with the sleek and functional Native Union X Tom Dixon collaboration. This set includes a wireless charger and a Lightning cable, both featuring the signature design elements of the renowned British designer.">
   </head>
   <body>
     <header>
       <!-- Logo -->
-      <img class="logo-img" src="../assets/images/logo.png" alt="" />
+      <div class="logo-menu">
+        <img class="logo-img" src="../assets/images/logo.png" alt="" />
+        <button class="menu-icon">
+          <img src="../assets/icons/menu.svg" alt="" />
+        </button>
+      </div>
       <!-- Nav Links -->
       <nav>
         <ul>
@@ -30,23 +38,13 @@
           <img src="../assets/icons/mail.svg" alt="mail_icon" />
           <img src="../assets/icons/search.svg" alt="mail_icon" />
           <img src="../assets/icons/person.svg" alt="mail_icon" />
-          <div>
+          <div class="notification-container">
             <span id="cart-notification">0</span>
             <img src="../assets/icons/shopping_bag.svg" alt="mail_icon" />
           </div>
         </div>
       </nav>
     </header>
-
-    <!-- <section>
-      <img class="cover" src="../assets/images/image-two.webp" alt="" />
-      <div class="gradiant">
-        <p>
-          Native Union <br />
-          X Tom dixon
-        </p>
-      </div>
-    </section> -->
 
     <!-- Slider main container -->
     <div class="swiper">
@@ -80,7 +78,8 @@
             </div>
           </section>
         </div>
-        <div class="swiper-slide">   <section>
+        <div class="swiper-slide">
+          <section>
             <img class="cover" src="../assets/images/image-two.webp" alt="" />
             <div class="gradiant">
               <p>Collaboration</p>
@@ -90,7 +89,8 @@
               </h1>
               <button>Learn More</button>
             </div>
-          </section></div>
+          </section>
+        </div>
       </div>
       <!-- If we need pagination -->
       <div class="swiper-pagination"></div>
@@ -104,31 +104,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper(".swiper", {
-        // Optional parameters
-
-        loop: true,
-
-        autoplay: {
-          delay: 3000, // Delay between transitions (in milliseconds)
-        },
-        // If we need pagination
-        pagination: {
-          el: ".swiper-pagination",
-        },
-
-        // Navigation arrows
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-
-        // And if we need scrollbar
-        scrollbar: {
-          el: ".swiper-scrollbar",
-        },
-      });
-    </script>
+    <script src="../scripts/swiper.js"></script>
+    <script src="../scripts/toggleMenu.js"></script>
   </body>
 </html>

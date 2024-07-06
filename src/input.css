@@ -2,76 +2,106 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+* {
+  padding: 0px;
+  margin: 0px;
 }
-
 header {
-  @apply  bg-Gray900 text-white flex items-center justify-between px-10 sm:flex-col md:flex-row;
+  @apply bg-Gray900 text-white flex items-center justify-between px-10
+  md:flex-row md:flex md:px-5
+  sm:relative sm:flex-col  sm:z-30;
 }
 
+header .logo-menu {
+  @apply flex justify-between items-center  
+  md:w-fit 
+  sm:w-full ;
+}
+header .logo-menu .menu-icon {
+  @apply  cursor-pointer 
+  md:hidden
+  sm:block ;
+}
 .logo-img {
-  @apply bg-transparent w-48;
+  @apply bg-transparent 
+  lg:w-48
+  md:w-40 
+  sm:w-48 ;
 }
 nav {
-  @apply flex  items-center;
+  @apply flex   bg-Gray900
+  md:items-center md:flex-row md:w-fit md:space-x-2 md:top-0 md:px-0
+  sm:items-center  sm:flex-col    sm:w-full   sm:absolute md:static    sm:mx-0 sm:top-[-500px];
+  transition: all 0.3s ease-in;
+  
 }
 nav ul {
-  @apply flex mr-5;
+  @apply flex   
+  lg:text-base lg:space-x-3 
+  md:divide-y-0 md:space-x-2  md:items-center md:justify-center md:flex-row md:w-fit
+  sm:flex-col  sm:w-full  sm:divide-y-[1px];
 }
+
 nav ul li,
 nav ul select {
-  @apply px-3 py-5  cursor-pointer bg-transparent;
+  @apply cursor-pointer bg-transparent 
+  lg:text-base
+  md:py-3 md:px-0 md:text-sm md:text-nowrap
+  sm:px-3  sm:py-2   sm:text-base;
 }
 
 nav ul select {
-  /* @apply bg-transparent mr-5 hover:bg-slate-400 cursor-pointer */
+ 
 }
 
 nav .nav_icons {
-  @apply flex  space-x-3 relative cursor-pointer;
+  @apply flex cursor-pointer justify-evenly 
+  lg:space-x-3
+  md:w-fit md:py-3  md:space-x-1  
+  sm:py-2 sm:w-1/2 ;
+}
+nav .nav_icons img{
+  @apply md:w-5 lg:w-6
+}
+
+.notification-container {
+  @apply relative  min-w-fit;
+}
+.notification-container img{
+  @apply static min-w-full;
+  
 }
 nav .nav_icons #cart-notification {
   @apply bg-white  text-Gray900  absolute top-[-10px] right-[-10px] w-5 h-5 text-sm rounded-full flex justify-center items-center;
 }
 
-
-.swiper .swiper-pagination-bullet{
-    background-color: white;
-    width: 40px;
-    height: 2px;
-    border-radius: 0px;
+.swiper .swiper-pagination-bullet {
+  background-color: white;
+  width: 40px;
+  height: 2px;
+  border-radius: 0px;
 }
 section {
   @apply bg-transparent h-[550px] w-screen relative;
 }
 
 .cover {
-  /* object-fit: contain;
-    width: 100%;
-    height: 100%; */
+ 
   object-position: top right;
   @apply object-cover object-center w-full  h-full;
 }
 
 section .gradiant {
-  /* position: absolute; */
-  /* width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0; */
-  @apply bg-gradient-to-r from-Blue900   to-transparent absolute w-full h-full top-0 right-0 left-0 bottom-0 flex items-start justify-center flex-col px-20 space-y-4;
-  
+  @apply bg-gradient-to-r from-Blue900   to-transparent absolute w-full h-full top-0 right-0 left-0 bottom-0 flex items-start justify-center flex-col px-20 space-y-5 text-nowrap;
 }
 
-section .gradiant p{
-    @apply  uppercase text-white ;
+section .gradiant p {
+  @apply uppercase text-white ;
 }
-section .gradiant .title{
-    @apply uppercase text-white text-7xl font-bold
-
+section .gradiant .title {
+  @apply uppercase font-bold text-white 
+  sm:text-5xl md:text-7xl ;
 }
-section .gradiant button { 
-    @apply bg-Yellow px-6 py-3 uppercase 
+section .gradiant button {
+  @apply bg-Yellow px-6 py-3 uppercase;
 }
